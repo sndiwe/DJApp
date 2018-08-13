@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <img src="./assets/ndiweLogo.png" style="width:50%">
     <router-view/>
   </div>
 </template>
