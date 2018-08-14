@@ -20,7 +20,7 @@ export default {
     clearLog: function () {
       this.$router.push({
         name: 'homePage',
-        path: '/'
+        path: '/homePage'
       })
     }
   }
