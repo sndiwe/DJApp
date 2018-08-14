@@ -4,11 +4,9 @@
         <b-field label="Find a Service">
             <b-autocomplete
                 v-model="name"
-                :data="data"
                 placeholder="e.g. Salvation Army"
                 field="title"
                 :loading="isFetching"
-                @input="getAsyncData"
                 @select="option => selected = option">
             </b-autocomplete>
         </b-field>
@@ -34,6 +32,7 @@
             </div>
             <footer class="card-footer">
               <a class="card-footer-item">Edit</a>
+              <a class="card-footer-item">Delete</a>
             </footer>
           </b-collapse>
     </section>

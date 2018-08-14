@@ -5,11 +5,11 @@ import App from './App'
 import router from './router'
 import Buefy from 'buefy'
 import 'buefy/lib/buefy.css'
-import Icon from 'buefy/src/components/icon'
+import components from 'buefy/src'
 
 Vue.config.productionTip = false
 Vue.use(Buefy)
-Vue.use(Icon)
+Vue.use(components)
 // Vue.use(DatePicker)
 // Vue.component(Buefy.Icon.name, Buefy.Icon)
 
