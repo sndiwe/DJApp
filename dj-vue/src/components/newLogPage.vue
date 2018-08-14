@@ -1,7 +1,5 @@
 <template>
   <div>
-    <img src="../assets/ndiweLogo.png" style="width:50%"><br><br>
-    <!-- <h1>{{ msg }}</h1> -->
     <template>
     <section>
         <b-field label="Name">
@@ -56,7 +54,7 @@ export default {
     clearLog: function () {
       this.$router.push({
         name: 'homePage',
-        path: '/'
+        path: '/homePage'
       })
     },
     submitLog: function () {
@@ -71,7 +69,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1{
+h1 {
   font-weight: bold;
 }
 </style>

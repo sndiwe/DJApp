@@ -1,23 +1,52 @@
 <template>
-  <div>
+  <div class="box has-text-centered">
     <img src="../assets/ndiweLogo.png" style="width:50%">
-    <h1>{{ msg }}</h1>
-    <div class="box has-text-centered">
+     <section>
+           <b-tabs @change="onChange">
+               <b-tab-item label="New">
+                   <component v-cloak :is="myComponent"/>
+               </b-tab-item>
+               <b-tab-item label="Existing" icon="google-photos">
+                 <component v-cloak :is="myComponent"/>
+               </b-tab-item>
+           </b-tabs>
+       </section>
+       <b-icon pack="fas" icon="user" size="is-small"></b-icon>
+    <!-- <div class="box has-text-centered">
       <a class="button is-info" @click="createLog()">New Log</a>
       <a class="button is-danger" @click="openLog()">Existing Log</a>
-    </div>
+    </div> -->
   </div>
 </template>
 
 <script>
+import newLogPage from '@/components/newLogPage'
+import openLogPage from '@/components/openLogPage'
 export default {
   name: 'homePage',
   data () {
     return {
-      msg: "Welcome to DJ's App"
+      msg: "Welcome to DJ's App",
+      myComponent: newLogPage
     }
   },
+  components: {
+    newLogPage,
+    openLogPage
+  },
   methods: {
+    onChange (value) {
+      console.log(value)
+      if (value === 0) {
+        this.myComponent = newLogPage
+      }
+      if (value === 1) {
+        this.myComponent = openLogPage
+      }
+    },
+    myFunction (message) {
+      console.log(message)
+    },
     createLog: function () {
       this.$router.push({
         name: 'newLogPage',
