@@ -1,20 +1,21 @@
 <template>
   <div>
     <img src="../assets/ndiweLogo.png" style="width:50%"><br><br>
-    <div class="field">
-      <label class="label">Username</label>
-      <div class="control has-icons-left has-icons-right">
-        <input class="input is-success" type="text" placeholder="Text input" value="bulma">
-        <span class="icon is-small is-left">
-          <i class="fas fa-user"></i>
-        </span>
-        <span class="icon is-small is-right">
-          <i class="fas fa-check"></i>
-        </span>
-      </div>
-      <p class="help is-success">This username is available</p>
-    </div>
+    <template>
+    <section>
+        <b-field label="User Email"
+            type="is-danger"
+            message="email address of user">
+            <b-input type="email"
+                value="djndiwe@gmail.com"
+                maxlength="30">
+            </b-input>
+        </b-field>
+    </section>
+    </template>
     <div class="box has-text-centered">
+      <b-icon pack="fas" icon="user" size="is-small">
+            </b-icon>
       <a class="button is-info" @click="clearLog()">Done</a>
     </div>
   </div>

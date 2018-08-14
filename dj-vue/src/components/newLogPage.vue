@@ -1,7 +1,5 @@
 <template>
   <div>
-    <img src="../assets/ndiweLogo.png" style="width:50%"><br><br>
-    <!-- <h1>{{ msg }}</h1> -->
     <template>
     <section>
         <b-field label="Name">
