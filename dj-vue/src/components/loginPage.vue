@@ -4,19 +4,20 @@
     <template>
     <section>
         <b-field label="User Email"
-            type="is-danger"
             message="email address of user">
             <b-input type="email"
                 value="djndiwe@gmail.com"
                 maxlength="30">
             </b-input>
         </b-field>
+        <b-field label="User Password">
+            <b-input type="password" value=""></b-input>
+        </b-field>
     </section>
     </template>
     <div class="box has-text-centered">
-      <b-icon pack="fas" icon="user" size="is-small">
-            </b-icon>
-      <a class="button is-info" @click="clearLog()">Done</a>
+      <a class="button is-info" @click="clearLog()">Submit</a>
+      <a class="button is-danger" @click="clearLog()">Cancel</a>
     </div>
   </div>
 </template>

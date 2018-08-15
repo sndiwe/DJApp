@@ -1,17 +1,16 @@
 <template>
-  <div class="box has-text-centered">
+  <div class="box has-text-centered bgColor">
     <img src="../assets/ndiweLogo.png" style="width:50%">
      <section>
            <b-tabs @change="onChange">
-               <b-tab-item label="New">
+               <b-tab-item label="New" v-cloak>
                    <component v-cloak :is="myComponent"/>
                </b-tab-item>
-               <b-tab-item label="Existing" icon="google-photos">
+               <b-tab-item label="Existing" v-cloak>
                  <component v-cloak :is="myComponent"/>
                </b-tab-item>
            </b-tabs>
        </section>
-       <b-icon pack="fas" icon="user" size="is-small"></b-icon>
     <!-- <div class="box has-text-centered">
       <a class="button is-info" @click="createLog()">New Log</a>
       <a class="button is-danger" @click="openLog()">Existing Log</a>
@@ -67,5 +66,11 @@ export default {
 <style scoped>
 h1{
   font-weight: bold;
+}
+.bgColor{
+  background-color:lightblue;
+}
+[v-cloak] {
+  display: none;
 }
 </style>
