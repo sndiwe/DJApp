@@ -3,10 +3,10 @@
     <img src="../assets/ndiweLogo.png" style="width:50%">
      <section>
            <b-tabs @change="onChange">
-               <b-tab-item label="New">
+               <b-tab-item label="New" v-cloak>
                    <component v-cloak :is="myComponent"/>
                </b-tab-item>
-               <b-tab-item label="Existing" icon="google-photos">
+               <b-tab-item label="Existing" v-cloak>
                  <component v-cloak :is="myComponent"/>
                </b-tab-item>
            </b-tabs>
@@ -69,5 +69,8 @@ h1{
 }
 .bgColor{
   background-color:lightblue;
+}
+[v-cloak] {
+  display: none;
 }
 </style>
