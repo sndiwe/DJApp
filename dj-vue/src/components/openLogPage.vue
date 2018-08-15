@@ -114,4 +114,7 @@ export default {
   .collapseMargin {
     margin-bottom: 10px;
   }
+  [v-cloak] {
+  display: none;
+}
 </style>
