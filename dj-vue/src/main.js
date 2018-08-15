@@ -5,11 +5,11 @@ import App from './App'
 import router from './router'
 import Buefy from 'buefy'
 import 'buefy/lib/buefy.css'
-import components from 'buefy/src'
+import Bulma from 'bulma'
 
 Vue.config.productionTip = false
 Vue.use(Buefy)
-Vue.use(components)
+Vue.use(Bulma)
 // Vue.use(DatePicker)
 // Vue.component(Buefy.Icon.name, Buefy.Icon)
 
